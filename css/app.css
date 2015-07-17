@@ -89,9 +89,4 @@ body {
 }
 .pre-out {
     overflow: scroll;
-/*    overflow: auto;
-    height: 80%;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;*/
 }
