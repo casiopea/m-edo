@@ -79,8 +79,10 @@ If you want be changing message other langueges ,
 2. Editing your langueges your locale file.
 3. Change locale file pointer in index.html.
 
+e.g.
 
-```e.g. index.html
+
+```html:index.html
 
    <script type="text/javascript" src="locale/de-de.js"></script>
    <!-- 
