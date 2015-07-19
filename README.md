@@ -81,11 +81,14 @@ If you want be changing message other langueges ,
 
 
 ```e.g. index.html
+
    <script type="text/javascript" src="locale/de-de.js"></script>
    <!-- 
     <script type="text/javascript" src="locale/en-us.js"></script>
     -->
+
 ```
+
 
 
 ### Process List View and Zombie Kill.
