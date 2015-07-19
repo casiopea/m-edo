@@ -3,14 +3,13 @@
  Web Based Mumps Editor and Executor Mumps routine for [gtm](http://www.fisglobal.com/products-technologyplatforms-gtm) to edit and execute mumps routines online by utilizing ewd.js and Node.js.
 
 ## Screen shot:
+[m-edo sample screen shot](https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext307.png?attredirects=0)
 
-![m-edo sample image]("https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext307.png?attredirects=0")
-
-## Github: 
+## Github
 https://github.com/casiopea/m-edo
 
-## Setup Instructions:
- 
+## Setup Instructions
+
 1. Change directory to ewd directory in your ewdjs setup e.g. /home/youruser/ewdjs/www/ewd/
 2. Do git clone https://github.com/casiopea/m-edo.git
 3. Move the m-edo.js to your node_modules directory. e.g. /home/youruser/ewdjs/node_modules/
