@@ -1,30 +1,31 @@
 # m-edo
 
+
  Web Based Mumps Editor and Executor Mumps routine for [gtm](http://www.fisglobal.com/products-technologyplatforms-gtm) to edit and execute mumps routines online by utilizing ewd.js and Node.js.
 
-## Screen shot:
+### Screen shot:
 
 [m-edo sample screen shot](
 https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext307.png?attredirects=0)
 
-## Github
+### Github
 
 https://github.com/casiopea/m-edo
 
-## Setup Instructions
+### Setup Instructions
 
 1. Change directory to ewd directory in your ewdjs setup e.g. /home/youruser/ewdjs/www/ewd/
 2. Do git clone https://github.com/casiopea/m-edo.git
 3. Move the m-edo.js to your node_modules directory. e.g. /home/youruser/ewdjs/node_modules/
 
-## About
+### About
 
 - Editor part is left side on screen. m-edo is hacking and enhancement [m-editor](https://github.com/faisalsami/m-editor) that made by Mr. Faisal.
 - Do(execute) part is right side on screen.
 - Before Do start, **selected label's line** on editor, and click play icon, start this label^routineName. 
 - Stop at click stop button, process Killed by **MUPIP STOP**.
 
-## Features and enhanced m-editor
+### Features and enhanced m-editor
 - Multi-user, Multi-routines edit and parallel executing.
 - A selected label^routineName Do execute, be impossible Do with paramater and $$function.
 - Executing stdout write to contents view aria (from mumps write).
@@ -40,20 +41,28 @@ https://github.com/casiopea/m-edo
 - Support Internationalization(i18n). default is en-us.
 - I18n client side locales are en-us.js and ja-jp.js file in locale, and i18n array at server m-edo.js node_module file.  
 
-## Process List View and Zombie Kill.
 
-###Usage:
+
+
+
+
+-----------------------------------------------------------------------------
+# Appendix
+
+### Process List View and Zombie Kill.
+
+##### Usage:
 click glyphicon-stats icon on Top Nav-bar
 ( glyphicon-stats link to http://getbootstrap.com/components/ )
 
-###Screen shot:
+##### Screen shot:
 [m-edo Process List View and Zombie Kill sample](
 https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext308.png?attredirects=0)
 
-###^%zmedoProcess 
+##### ^%zmedoProcess 
 m-edo executing process management global is ^%zmedoProcess.
 
-###Meaning of the status is as follows:
+##### Meaning of the status is as follows:
 <dl>
   <dt>osRun</dt>
   <dd>Execute mumps -run "label^routine" from other console, so it is not useing m-edo that is not exists ^%zmedoProcess node.</dd>
