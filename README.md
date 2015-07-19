@@ -4,7 +4,7 @@
 
 ## Screen shot:
 
-![m-edo sample image](https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext307.png?attredirects=0)
+![m-edo sample image]("https://sites.google.com/site/gtmstudy/m-gateway/ewdgateway2/m-edo/ext307.png?attredirects=0")
 
 ## Github: 
 https://github.com/casiopea/m-edo
