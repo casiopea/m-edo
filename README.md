@@ -41,13 +41,52 @@ https://github.com/casiopea/m-edo
 - Support Internationalization(i18n). default is en-us.
 - I18n client side locales are en-us.js and ja-jp.js file in locale, and i18n array at server m-edo.js node_module file.  
 
-
-
-
-
-
 -----------------------------------------------------------------------------
 # Appendix
+
+### error trap in mumps routine (gtm_etrap)
+
+##### default environment variable gtm_etrap
+
+Set the environment variable gtm_etrap which overrides the default $ZTRAP="B"
+
+See [GT.M Programmer's Guide > Development Cycle > Processing Errors from Direct Mode and Shell](http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch03s07.html)
+
+##### gtm_etrap in m-edo.js
+
+If leave this default, when an error occurs, it will into GT.M direct mode.
+In order to avoid it, before spawn mumps -run in m-edo.js, set environment variable gtm_etrap = "goto CLIERR^%XCMD"
+
+See [function gtmSpawn code in m-edo.js](https://github.com/casiopea/m-edo/blob/master/m-edo.js)
+
+
+### Support Internationalization(i18n).
+
+##### Server side
+
+It is i18n array in m-edo.js node_module file.
+If changing respons message other langueges, set values in i18n array.
+See: https://github.com/casiopea/m-edo/blob/master/m-edo.js
+
+##### Client side
+
+I18n client side locales are en-us.js or ja-jp.js file in locale directory.
+See: https://github.com/casiopea/m-edo/blob/master/locale/en-us.js
+
+If you want be changing message other langueges ,
+
+1. Copy from en-us.js to your locale faile. e.g. de-de.js
+2. Editing your langueges your locale file.
+3. Change locale file pointer in index.html.
+
+
+```e.g. index.html
+   <script type="text/javascript" src="locale/de-de.js"></script>
+   <!-- 
+    <script type="text/javascript" src="locale/en-us.js"></script>
+    -->
+```
+
 
 ### Process List View and Zombie Kill.
 
@@ -65,13 +104,13 @@ m-edo executing process management global is ^%zmedoProcess.
 ##### Meaning of the status is as follows:
 <dl>
   <dt>osRun</dt>
-  <dd>Execute mumps -run "label^routine" from other console, so it is not useing m-edo that is not exists ^%zmedoProcess node.</dd>
+  <dd>Execute mumps -run "label^routine" from other console, so it is not invoke from m-edo that is not exists ^%zmedoProcess node.</dd>
   <dt>nowRunning</dt>
   <dd>You or other user now executing. This process exists ^%zmedoProcess node</dd>
   <dt>pastFinish</dt>
   <dd>m-edo session is abnormal termination, but mumps process is normaly finish. Garbage m-edo session in ^%zmedoProcess node</dd>
   <dt>maybeZombie</dt>
-  <dd>m-edo session is abnormal termination, and mumps process is uncontrollable. It may be Zombie.</dd>
+  <dd>m-edo session is abnormal termination, and mumps process is uncontrollable exist. It may be Zombie.</dd>
 </dl>
 
 Kill Zombie process be careful. 
