@@ -99,7 +99,6 @@ var locale = {
         "intSubmit" : "入力テキストを送信"
     }
 };
-
 /**
  * Select2 Japanese translation.
  */

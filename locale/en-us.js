@@ -55,7 +55,7 @@ var locale = {
     placeholder: {
         "selectedRoutine": "Select Routine",
         "txtNewRoutine": "Enter Routine Name",
-        "txtUsername" : "Enter m-edo Username",
+        "txtUsername" : "Enter your Username",
         "txtPassword": "Enter your Password"
     },
     tooltip: {
@@ -99,7 +99,6 @@ var locale = {
         "intSubmit" : "Submit input text"
     }
 };
-
 /**
  * Select2 en-US translation.
  */

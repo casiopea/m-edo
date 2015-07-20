@@ -30,7 +30,6 @@
       $elem.find('.nav-tabs-horizontal').animate({
           scrollLeft: currentPos - widthOfReducedList
       }, 500);
-      
       if (currentPos - widthOfReducedList > 0) {
         currentPos -= widthOfReducedList;    
       } else {
@@ -42,7 +41,6 @@
         // left: currentPos + widthOfReducedList
         scrollLeft: currentPos + widthOfReducedList
       }, 500);
-
       if ( (currentPos + widthOfReducedList) < (widthOfList - widthOfReducedList)) {
         currentPos += widthOfReducedList;
       } else {
@@ -60,54 +58,44 @@
       } else {
         $elem.find('.arrow-right').removeClass('disabled');
       };
-
       if (position <= 0) {
         $elem.find('.arrow-left').addClass('disabled');
       } else {
         $elem.find('.arrow-left').removeClass('disabled');
       };
     };
-
     // Event binding
     $(window).resize( function () {
       adjustScroll();
     });
-
     $elem.bind('append', function(){
       widthOfList = 0;
       append = 1;
       manualScroll();
       adjustScroll();
     });
-
     $elem.bind('adjustScroll', function(){
       widthOfList = 0;
       manualScroll();
       adjustScroll();
     });
-
     $elem.bind('manualScroll', function(){
       manualScroll();
     });
-
     $elem.find('.arrow-left').on('click.horizontalTabs', function (){
       // console.log('左クリック');
       scrollLeft();
     });
-
     $elem.find('.arrow-right').on('click.horizontalTabs', function (){
       // console.log('右クリック');
       scrollRight();
     });
-
     $elem.find('.nav-tabs-horizontal').scroll( function (){
       manualScroll();
       // console.log('マニュアルスクロール');
     });
-
     // Initial Call
     adjustScroll();
-
     return this;
   }
 
