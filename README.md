@@ -1,6 +1,5 @@
 # m-edo
 
-
  Web Based Mumps Editor and Executor Mumps routine for [gtm](http://www.fisglobal.com/products-technologyplatforms-gtm) to edit and execute mumps routines online by utilizing ewd.js and Node.js.
 
 ### Screen shot:
@@ -43,6 +42,22 @@ https://github.com/casiopea/m-edo
 
 -----------------------------------------------------------------------------
 # Appendix
+
+### Login Type
+
+m-edo has two login types, one is 'medo' and other is 'ewdMonitor'. 
+Default is 'medo', that fixed a username 'medo' and a password 'gtmuser'.
+
+'ewdMonitor' use ewdMonitor's username and password.
+ewdMonitor Administrator maintain at security > ewdMonitor User Management.
+
+You can change loginType from 'medo' to 'ewdMonitor' in app.js.
+
+```javascript:app.js
+
+    loginType : 'medo',   // or 'ewdMonitor'
+
+```
 
 ### error trap in mumps routine (gtm_etrap)
 
