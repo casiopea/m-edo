@@ -43,7 +43,7 @@ https://github.com/casiopea/m-edo
 -----------------------------------------------------------------------------
 # Appendix
 
-### Login Type
+### 1. Login Type
 
 m-edo has two login types, one is 'medo' and other is 'ewdMonitor'. 
 Default is 'medo', that fixed a username 'medo' and a password 'gtmuser'.
@@ -59,7 +59,7 @@ You can change loginType from 'medo' to 'ewdMonitor' in app.js.
 
 ```
 
-### error trap in mumps routine (gtm_etrap)
+### 2. error trap in mumps routine (gtm_etrap)
 
 ##### default environment variable gtm_etrap
 
@@ -75,7 +75,7 @@ In order to avoid it, before spawn mumps -run in m-edo.js, set environment varia
 See [function gtmSpawn code in m-edo.js](https://github.com/casiopea/m-edo/blob/master/m-edo.js)
 
 
-### Support Internationalization(i18n).
+### 3. Support Internationalization(i18n).
 
 ##### Server side
 
@@ -108,7 +108,7 @@ e.g.
 
 
 
-### Process List View and Zombie Kill.
+### 4. Process List View and Zombie Kill.
 
 ##### Usage:
 click glyphicon-stats icon on Top Nav-bar
@@ -134,6 +134,4 @@ m-edo executing process management global is ^%zmedoProcess.
 </dl>
 
 Kill Zombie process be careful. 
-
-
 
